@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "excludePackagePatterns": ["^de\\.codecentric\\.boot\\.admin"]
+    },
+    {
+      "description": "Automatically merge minor and patch-level updates when checks pass, creates a PR otherwise",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    }
+  ]
+}
